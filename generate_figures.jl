@@ -253,21 +253,6 @@ plot!(plotSecondTranportMaps, positions, transportSecondSourceToSecondTarget;
 savefig(plotSecondTranportMaps, "transport_maps_mu1_to_mu3.pdf")
 
 
-# Combine plots
-
-layoutMarginals = @layout [a{0.30w} b{0.30w} c{0.30w}]
-combinedMargianlPlots = plot(
-plotMarginalOne, plotMarginalTwo, plotMarginalThree;
-  layout = layoutMarginals,
-  size   = (1200, 400),   
-  framestyle = :box       
-)
-savefig(combinedMargianlPlots, "all_marginals.pdf")
-
-
-layoutTransportMaps = @layout [a{0.45w} b{0.45w}]
-combinedTransportMapsPlots = combinedMargianlPlots = plot(plotFirstTranportMaps, plotSecondTranportMaps; layout = layoutTransportMaps, size = (800, 400), framestyle = :box, titlefont  = font(8) )
-savefig(combinedTransportMapsPlots, "all_transport_maps.pdf")
 
 
 
