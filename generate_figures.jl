@@ -189,7 +189,7 @@ marginalThreeExact = marginalThreeExact / sum(marginalThreeExact)
 plotMarginalOne = plot(positionsExact, marginalOneExact;
     color = :black,
     linewidth = 2,
-    title = "First marginal (mu1)",
+    title = "First marginal",
     legend = false)
   
 savefig(plotMarginalOne, "mu1.pdf")
@@ -197,7 +197,7 @@ savefig(plotMarginalOne, "mu1.pdf")
 plotMarginalTwo = plot(positionsExact, marginalTwoExact;
     color = :black,
     linewidth = 2,
-    title = "Second marginal (mu2)",
+    title = "Second marginal",
     legend = false)
   
 savefig(plotMarginalTwo, "mu2.pdf")
@@ -206,7 +206,7 @@ savefig(plotMarginalTwo, "mu2.pdf")
 plotMarginalThree = plot(positionsExact, marginalThreeExact;
     color = :black,
     linewidth = 2,
-    title = "Third marginal (mu3)",
+    title = "Third marginal",
     legend = false)
   
 savefig(plotMarginalThree, "mu3.pdf")
