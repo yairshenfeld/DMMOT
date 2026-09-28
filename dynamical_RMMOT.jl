@@ -570,7 +570,7 @@ function dynamical_RMMOT(
         end
         normOld = normNew
     end
-    normI  = sqrt(normNew)
+    normI = sqrt(nMarginals)
     sigma = 1/gamma
     tau = tauScale  / (normI^2 * sigma)
     if verbose

@@ -29,7 +29,7 @@ nTime = 10
 nSpace = 10
 
 # number of iterations
-nIter = 5000  # 5000
+nIter = 50  # 5000
 
 dTotal = nMarginals * dEuclid # toal dimension
 
