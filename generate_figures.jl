@@ -29,7 +29,7 @@ nTime = 10
 nSpace = 10
 
 # number of iterations
-nIter = 50  # 5000
+nIter = 5000 # 5000
 
 dTotal = nMarginals * dEuclid # toal dimension
 
@@ -124,7 +124,7 @@ marginals[:, 3] = marginalThree
 
 println("start")
 
-rho, rhoAvg, momentum, simP = dynamical_RMMOT(nTime, nSpace, dTotal, dEuclid, nMarginals , marginals, baseMeasure;
+rho, rhoAvg, momentum, simP = @time dynamical_RMMOT(nTime, nSpace, dTotal, dEuclid, nMarginals , marginals, baseMeasure;
     nu = nu,
     nIter = nIter,
     gamma = gamma,
@@ -146,7 +146,12 @@ println(simP["errorContinuityEquation"])
 
 
 # Extract the coupling from the output of dynamical_RMMOT
+
 jointLawFinal = rho[nTime+1, ntuple(_ -> :, dTotal)...]
+
+
+
+
 
 positionsExact = LinRange(0/500, 1-1/(500), 500)
 

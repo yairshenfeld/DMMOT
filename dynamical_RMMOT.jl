@@ -448,10 +448,9 @@ function dynamical_RMMOT(
     tolDichotomy = 1e-10,
     maxIterDichotomy = 50,
     regInversion = 1e-10,
-    # Displaying the time
+    # Report metrics
     verbose = false
     )
-
     # Create the timer
     timer = TimerOutput()
 
